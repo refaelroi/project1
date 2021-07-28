@@ -35,9 +35,23 @@ application {
     // Define the main class for the application.
     mainClass = 'project1.App'
 }
-tasks.named('test') {
-    // Use JUnit Platform for unit tests
+
+tasks.register('hello'){
+doLast {
+        println 'Hello world!'
+	
+    }
 }
+
+tasks.register('hello2'){
+doLast {
+	def name = System.in.newReader().readLine()
+	print "Hello " + name
+	println "!"
+	
+    }
+}
+
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()

@@ -5,10 +5,13 @@ package project1
 
 class App {
     String getGreeting() {
-        return 'Hello World!'
+	
+        return 'Hello world!'
     }
 
     static void main(String[] args) {
         println new App().greeting
+	
+   	
     }
 }
