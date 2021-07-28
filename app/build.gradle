@@ -52,6 +52,23 @@ doLast {
     }
 }
 
+def hellostring
+tasks.register('bounstaskpart1') {
+    
+    doLast {
+	def name = System.in.newReader().readLine()
+        hellostring = 'Hello ' +name
+    }
+}
+
+
+tasks.register('bounstask') {
+    dependsOn tasks.bounstaskpart1
+    doLast {
+        println hellostring
+    }
+}
+
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()

@@ -22,5 +22,7 @@ print 'Hello DevOps!'
 
 bouns task
 ----------
-
+print 'Hello <user_input>'
+1. write in the cmd : gradle -q bounstask
+2. write input string 
 
